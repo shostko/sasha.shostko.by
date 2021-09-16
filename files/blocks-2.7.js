@@ -1,0 +1,2 @@
+function t851_init(recid){var rec=$('#rec'+recid+' .t851');t851_updateLazyLoad(recid)}
+function t851_updateLazyLoad(recid){var scrollContainer=$("#rec"+recid+" .t851__container_mobile-flex");var curMode=$(".t-records").attr("data-mode");if(scrollContainer.length&&curMode!="edit"&&curMode!="preview"){scrollContainer.bind('scroll',t_throttle(function(){if(window.lazy==='y'||$('#allrecords').attr('data-lazy')==='yes'){t_onFuncLoad('t_lazyload_update',function(){t_lazyload_update()})}},500))}}
